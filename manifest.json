@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Keep Song Title for YouTube Music",
+  "version": "1.0.0",
+  "description": "Keeps the current song in the YouTube Music tab title while paused.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ytm-keep-title@codejam.info",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
